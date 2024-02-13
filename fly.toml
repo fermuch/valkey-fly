@@ -6,6 +6,7 @@ app = 'very-redis'
 primary_region = 'sin'
 
 [build]
+image = "ghcr.io/umarhadi/redis-fly:main"
 
 [http_service]
 internal_port = 6379
