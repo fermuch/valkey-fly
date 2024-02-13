@@ -1,0 +1,21 @@
+# fly.toml app configuration file generated for very-redis on 2024-02-13T21:20:09+07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+app = 'very-redis'
+primary_region = 'sin'
+
+[build]
+
+[http_service]
+internal_port = 6379
+force_https = true
+auto_stop_machines = false
+auto_start_machines = true
+min_machines_running = 0
+processes = ['app']
+
+[[vm]]
+cpu_kind = 'shared'
+cpus = 1
+memory_mb = 256
