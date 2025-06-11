@@ -1,6 +1,6 @@
-FROM redis:7.0.12-alpine
+FROM valkey/valkey:8.1.1-alpine
 
-COPY ./start_redis.sh /usr/local/bin/
+COPY ./start_valkey.sh /usr/local/bin/
 
 EXPOSE 6379
-CMD ["start_redis.sh"]
+CMD ["start_valkey.sh"]
